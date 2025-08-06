@@ -1,0 +1,37 @@
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+    Scanner s = new Scanner(System.in);
+        int a = s.nextInt();
+        int b = s.nextInt();
+        int c = s.nextInt();
+        
+        boolean valid = (a + b  > c) && (b+c>a) && (c+a > b);
+        boolean E = (a == b) && (b ==c) && (c==a);
+        boolean I = (a == b) || (b==c) || (c == a); 
+        boolean S = (a != b) && (b !=c) && (c!=a);
+        if(!valid)
+        {
+             System.out.println("Not a valid triangle"); 
+        }
+        else{
+        if(valid && E)
+        {
+            System.out.println("Equilateral Triangle");
+        }
+        else if( I)
+        {
+            System.out.println("Isosceles Triangle");
+        }
+        else 
+        {
+            System.out.println("Scalene Triangle");
+        }
+        }
+     
+        
+    }
+}
