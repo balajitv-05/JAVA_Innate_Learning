@@ -1,0 +1,38 @@
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner s = new Scanner (System.in);
+        int i = s.nextInt();
+        int j = s.nextInt();
+        int largest = largest(i,j);
+        // System.out.println(largest);
+        int small = small(i,j);
+        // System.out.println(small);
+        int temp;
+        int n  = largest;
+        while(largest != 0)
+        {
+            
+            if(largest < small) 
+            {   temp = largest;
+                largest = small;
+                small = temp;
+            }
+            largest = largest % small;
+        }
+        System.out.println(small);
+    }
+    public static int largest(int a, int b)
+    {
+        if(a > b) return a;
+        else return b;
+    }
+    public static int small(int a,int b)
+    {
+        if(a<b) return a;
+        else return b;
+    }
+}
