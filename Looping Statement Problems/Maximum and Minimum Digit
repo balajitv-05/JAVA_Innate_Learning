@@ -1,0 +1,30 @@
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner s =new Scanner (System.in);
+        long a = s.nextLong();
+        a = Math.abs(a);
+        int max = 0;
+        int small = 9;
+        
+        if(a == 0)
+        {
+            System.out.println("0 0");
+            return;
+        }
+        
+        while(a > 0)
+        {
+            int x = (int)(a%10);
+            if(x > max) max = x;
+            if(x < small) small = x;
+            // max = Math.max(x,max);
+            // small = Math.min(x,small);
+            a= a/10;
+        }
+        System.out.print(max+" "+small);
+    }
+}
