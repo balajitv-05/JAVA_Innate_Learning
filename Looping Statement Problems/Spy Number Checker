@@ -1,0 +1,19 @@
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner s =  new Scanner (System.in);
+        int a  = s.nextInt();
+        int sum = 0;
+        int pro = 1;
+        for(int i =a;i>0;i=i/10)
+        {   int x = i % 10;
+            sum = sum +x;
+            pro = pro * x;
+        }
+        if(sum == pro) System.out.println("Spy Number");
+        else System.out.println("Not a Spy Number");
+    }
+}
