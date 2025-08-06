@@ -1,0 +1,24 @@
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner s = new Scanner(System.in);
+        int a = s.nextInt();
+        int b = a * a;
+        int c = a;
+        int count = 0;
+        while(a != 0)
+        {
+            
+            a = a/10;
+            count++;
+        }
+        
+        // System.out.println(count);
+        b = b % (int)Math.pow(10,count);
+        if(c == b) System.out.println("Automorphic");
+        else System.out.println("Not Automorphic");
+    }
+}
