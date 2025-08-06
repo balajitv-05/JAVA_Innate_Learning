@@ -1,0 +1,18 @@
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner s = new Scanner(System.in);
+        int n = s.nextInt();
+        n = Math.abs(n);
+        int count = 0;
+        if(n == 0) count = 1;
+        for(int i = n; i > 0 ; i= i /10)
+        {
+            count++;
+        }
+        System.out.println(count);
+    }
+}
