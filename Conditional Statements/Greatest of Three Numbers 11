@@ -1,0 +1,45 @@
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner s = new Scanner(System.in);
+        int a = s.nextInt();
+        int b = s.nextInt();
+        int c = s.nextInt();
+        int largest = a;
+        if(largest > b || c > b)
+        {
+            if(largest > c)
+            {
+                
+                System.out.println(largest+" is the greatest");
+            }
+            else if(largest == c)
+            {
+                
+                System.out.println("There is a tie for the greatest number");
+            }
+            
+            else
+            {
+                largest = c;
+               System.out.println(largest+" is the greatest"); 
+            }
+            
+        }
+        else
+        {
+            if(b == largest)
+            {
+                System.out.println("There is a tie for the greatest number");
+            }
+            else
+            {
+                largest = b;
+                System.out.println(largest+" is the greatest"); 
+            }
+        }
+    }
+}
