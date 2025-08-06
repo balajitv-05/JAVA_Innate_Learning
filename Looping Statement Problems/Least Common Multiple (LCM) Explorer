@@ -1,0 +1,42 @@
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner s =  new Scanner (System.in);
+        int a = s.nextInt();
+        int b = s.nextInt();
+        int gcd = gcd (a,b);
+        int lcm = ((a*b)/gcd);
+        System.out.println(lcm);
+        
+    }
+    public static int largest(int a ,int b)
+    {
+        if(a >b) return a;
+        else return b;
+    }
+    public static int small (int a,int b)
+    {
+        if(a < b) return a;
+        else return b;
+    }
+    public static int gcd(int a,int b)
+    {
+        int largest = largest(a,b);
+        int small = small(a,b);
+        int temp;
+        while(largest != 0)
+        {
+            if(largest<small)
+            {
+                temp = largest;
+                largest = small;
+                small = temp;
+            }
+            largest = largest % small;
+        }
+        return small;
+    }
+}
