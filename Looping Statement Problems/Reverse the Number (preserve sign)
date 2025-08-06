@@ -1,0 +1,19 @@
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner s = new Scanner(System.in);
+        int a = s.nextInt();
+        // if(a < 0)  a =a * (-1);
+        int rev = 0;
+        while(a != 0)
+        {
+            int x =a%10;
+             rev = rev*10+x;
+            a =a/10;
+        }
+        System.out.println(rev);
+    }
+}
