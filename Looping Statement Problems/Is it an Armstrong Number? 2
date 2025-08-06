@@ -1,0 +1,39 @@
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner s = new Scanner (System.in);
+        int a = s.nextInt();
+        a = Math.abs(a);
+        int org = a;
+        double c = 0;
+        while(a != 0)
+        {
+            c++;
+            a = a/10;
+        }
+        // System.out.println(c);
+        boolean x = Armstrong(org,c);
+        System.out.println(x);
+    }
+    public static boolean Armstrong(int a,double b)
+    {    int org = a;
+        double x = 0;
+        double sum = 0;
+    
+        while(a !=0)
+        {
+            x = a % 10;
+            double y = (Math.pow(x,b));
+            sum = sum + y;
+            a = a/10;
+        }
+     
+        if(sum == org) return true;
+        else return false;
+    
+    }
+
+}
