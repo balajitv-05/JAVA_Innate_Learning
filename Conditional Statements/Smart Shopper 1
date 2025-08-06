@@ -1,0 +1,35 @@
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner s  = new Scanner(System.in);
+        int rate1 = s.nextInt();
+        int quan1 = s.nextInt();
+        int rate2 = s.nextInt();
+        int quan2 = s.nextInt();
+        int rate3 = s.nextInt();
+        int quan3 = s.nextInt();
+        int budget = s.nextInt();
+        
+        int pro1 = rate1 * quan1;
+        int pro2 = rate2 * quan2;
+        int pro3 = rate3 * quan3;
+        float sum = pro1+pro2+pro3;
+        float sum1 = (float) (sum * 0.10);
+        sum1 = sum1 +sum;
+        
+        System.out.printf("Total (Before Tax): %.2f\n",sum);
+        System.out.printf("Total (After Tax): %.2f\n",sum1);
+        if(sum1 > budget )
+        {
+            System.out.println("Over Budget");
+        }
+        else
+        {
+            System.out.println("Within Budget");
+        }
+        
+    }
+}
