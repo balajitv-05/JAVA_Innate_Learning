@@ -1,0 +1,22 @@
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner s  = new Scanner(System.in);
+        int a = s.nextInt();
+        int sum1 = 0;
+        int sum0 = 0;
+        if(a < 0) a = a * (-1);
+        while( a != 0)
+        {
+            int x = a % 10;
+            if(x%2 == 0) sum0 = sum0 + x;
+            else sum1 = sum1+x;
+            
+            a = a/10;
+        }
+        System.out.println(sum1+" "+sum0);
+    }
+}
